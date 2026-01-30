@@ -96,7 +96,18 @@ struct ContentView: View {
                 Spacer()
             }
         }
-        .background(Color(UIColor.systemBackground))
+        .background(
+            LinearGradient(
+                gradient: Gradient(colors: [
+                    Color.blue.opacity(0.15),
+                    Color.purple.opacity(0.1),
+                    Color.white
+                ]),
+                startPoint: .topLeading,
+                endPoint: .bottomTrailing
+            )
+        )
+
     }
 }
 
